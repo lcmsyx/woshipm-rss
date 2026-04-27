@@ -1,102 +1,221 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>人人都是产品经理快讯 - 2026-04-26</title>
-        <link>https://www.woshipm.com/digest</link>
-        <description>人人都是产品经理每日快讯聚合</description>
-        <language>zh-CN</language>
-        <lastBuildDate>Sun, 26 Apr 2026 20:55:10 +0800</lastBuildDate>
-        <atom:link href="https://www.woshipm.com/digest" rel="self"/>
+  <channel>
+    <title>人人都是产品经理快讯</title>
+    <link>https://www.woshipm.com/digest</link>
+    <description>人人都是产品经理每日快讯聚合，每2小时增量更新</description>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 27 Apr 2026 17:02:52 +0800</lastBuildDate>
+    <atom:link href="https://lcmsyx.github.io/woshipm-rss/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title><![CDATA[据商务部消息，一季度，我国批发和零售业增加值同比增长4.1%，我国批发和零售业发展开局良好。一季度，我国批发和零售业增加]]></title>
+      <link>https://www.woshipm.com/digest</link>
+      <guid isPermaLink="false">491545</guid>
+      <description><![CDATA[据商务部消息，一季度，我国批发和零售业增加值同比增长4.1%，我国批发和零售业发展开局良好。一季度，我国批发和零售业增加值3.5万亿元，同比增长4.1%，占GDP比重为10.5%。市场运行起步平稳，多数业态保持增长。从批发业看，一季度，商务部重点联系商品市场成交额同比增长8.6%，其中生产资料类、工业消费品类市场成交额同比分别增长16.1%、10.7%。从零售业看，一季度，商品零售额11.3万亿元，同比增长2.2%。]]></description>
+      <pubDate>Mon, 27 Apr 2026 11:16:23 +0800</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[4月24日，第十九届北京国际汽车展览会上，面壁智能正式发布SuperMate端侧智能座舱方案的全新升级版本。目前，Sup]]></title>
+      <link>https://www.woshipm.com/digest</link>
+      <guid isPermaLink="false">491536</guid>
+      <description><![CDATA[4月24日，第十九届北京国际汽车展览会上，面壁智能正式发布SuperMate端侧智能座舱方案的全新升级版本。目前，SuperMate已在吉利、长安马自达等车企的多款量产车型中实现搭载交付。]]></description>
+      <pubDate>Mon, 27 Apr 2026 11:15:36 +0800</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[爱企查App显示，小米汽车科技有限公司申请的“线控转向系统的力反馈方法、装置、车辆和介质”发明专利获授权。本公开涉及车辆]]></title>
+      <link>https://www.woshipm.com/digest</link>
+      <guid isPermaLink="false">491541</guid>
+      <description><![CDATA[爱企查App显示，小米汽车科技有限公司申请的“线控转向系统的力反馈方法、装置、车辆和介质”发明专利获授权。本公开涉及车辆技术领域，该方法包括：获取方向盘转速、方向盘角度和车速；根据方向盘转速确定方向盘转动方向，并根据方向盘转动方向和方向盘角度确定对应的第一基础力；根据车速确定对应的第一比值，第一比值与所述车速成反比；根据第一基础力和第一比值，确定第一反馈力矩；根据第一反馈力矩对方向盘进行力反馈。本公开能够为驾驶员提供稳定的手力反馈，鲁棒性更强。]]></description>
+      <pubDate>Mon, 27 Apr 2026 11:14:31 +0800</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[国家能源局4月27日发布2026年3月全国电动汽车充电设施数据。根据国家充电设施监测服务平台数据，截至2026年3月底，]]></title>
+      <link>https://www.woshipm.com/digest</link>
+      <guid isPermaLink="false">491543</guid>
+      <description><![CDATA[国家能源局4月27日发布2026年3月全国电动汽车充电设施数据。根据国家充电设施监测服务平台数据，截至2026年3月底，我国电动汽车充电基础设施（枪）总数达到2148.1万个，同比增长46.9%。其中，公共充电设施（枪）486.3万个，同比增长28.1%，公共充电桩额定总功率达到2.34亿千瓦，平均功率约为48.06千瓦；私人充电设施（枪）1661.8万个，同比增长53.5%，私人充电设施报装用电容量达到1.47亿千伏安。]]></description>
+      <pubDate>Mon, 27 Apr 2026 11:13:28 +0800</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[国家统计局数据显示，1-3月份，全国规模以上工业企业实现利润总额16960.4亿元，同比增长15.5%。1-3月份，规模]]></title>
+      <link>https://www.woshipm.com/digest</link>
+      <guid isPermaLink="false">491532</guid>
+      <description><![CDATA[国家统计局数据显示，1-3月份，全国规模以上工业企业实现利润总额16960.4亿元，同比增长15.5%。1-3月份，规模以上工业企业中，国有控股企业实现利润总额6196.1亿元，同比增长10.1%；股份制企业实现利润总额13054.6亿元，增长20.9%；外商及港澳台投资企业实现利润总额3837.3亿元，增长1.2%；私营企业实现利润总额4305.3亿元，增长25.4%。此外，3月份，规模以上工业企业利润同比增长15.8%。]]></description>
+      <pubDate>Mon, 27 Apr 2026 11:12:19 +0800</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[4月27日，哔哩哔哩对外宣布开启《硅碳合战·S1——首届bilibili AI造物联赛》，并开放报名通道。据披露，202]]></title>
+      <link>https://www.woshipm.com/digest</link>
+      <guid isPermaLink="false">491544</guid>
+      <description><![CDATA[4月27日，哔哩哔哩对外宣布开启《硅碳合战·S1——首届bilibili AI造物联赛》，并开放报名通道。据披露，2026年， AI 泛智能体（AI Agent）、AI创业等关键词在B站的搜索量同比增长超500%。]]></description>
+      <pubDate>Mon, 27 Apr 2026 11:11:24 +0800</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[国家统计局工业司首席统计师于卫宁解读2026年1-3月份工业企业利润数据时表示，一季度，面对复杂经济环境，党中央、国务院]]></title>
+      <link>https://www.woshipm.com/digest</link>
+      <guid isPermaLink="false">491533</guid>
+      <description><![CDATA[国家统计局工业司首席统计师于卫宁解读2026年1-3月份工业企业利润数据时表示，一季度，面对复杂经济环境，党中央、国务院及时加大宏观调控力度，靠前实施更加积极有为的宏观政策，工业经济稳步回升，规模以上工业企业利润增长加快，装备制造业和高技术制造业利润快速增长，原材料制造业利润两位数增长，工业企业效益状况呈现持续改善态势。]]></description>
+      <pubDate>Mon, 27 Apr 2026 11:11:09 +0800</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[蚂蚁灵光App今日上线“体验世界模型”功能。据其介绍这是业界首个可在移动端体验世界模型的AGI产品。用户只需上传一张图片]]></title>
+      <link>https://www.woshipm.com/digest</link>
+      <guid isPermaLink="false">491547</guid>
+      <description><![CDATA[蚂蚁灵光App今日上线“体验世界模型”功能。据其介绍这是业界首个可在移动端体验世界模型的AGI产品。用户只需上传一张图片，即可在手机上最长60秒探索3D世界，并且用手游操控视角，像玩游戏一样在里面走动探索，从触发指令到开始探索，仅需秒级。]]></description>
+      <pubDate>Mon, 27 Apr 2026 11:10:51 +0800</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[近日，继今年3月完成10亿元人民币战略轮融资后，星动纪元再度完成超2亿美元新一轮融资。本轮融资由顺丰集团领投；红杉中国、]]></title>
+      <link>https://www.woshipm.com/digest</link>
+      <guid isPermaLink="false">491527</guid>
+      <description><![CDATA[近日，继今年3月完成10亿元人民币战略轮融资后，星动纪元再度完成超2亿美元新一轮融资。本轮融资由顺丰集团领投；红杉中国、IDG资本、中金资本、京铭资本、朝希资本、鲁信创投、聚合资本、隆启投资等知名财务机构联合注资；科捷智能、东风产投、工银资本、联通旗下基金等多家头部产业方共同参与；老股东清控天诚、鸿瑞达亦持续加码增持。]]></description>
+      <pubDate>Mon, 27 Apr 2026 11:09:46 +0800</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[“中数睿智”日前已完成亿元级别的B轮融资。本轮由清控金信资本、元合重元和尚贤湖基金联合领投，老股东鼎晖VGC持续加注。距]]></title>
+      <link>https://www.woshipm.com/digest</link>
+      <guid isPermaLink="false">491534</guid>
+      <description><![CDATA[“中数睿智”日前已完成亿元级别的B轮融资。本轮由清控金信资本、元合重元和尚贤湖基金联合领投，老股东鼎晖VGC持续加注。距离上一轮融资仅过去半年，这家成立于2020年的To B企业级智能体操作系统创业公司，已完成技术体系重大突破、核心团队全面升级、商业化规模翻倍增长，并成功将业务触角延伸至海外市场。]]></description>
+      <pubDate>Mon, 27 Apr 2026 11:09:37 +0800</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[国家能源局4月27日发布2026年3月全国电动汽车充电设施数据。根据国家充电设施监测服务平台数据，截至2026年3月底，]]></title>
+      <link>https://www.woshipm.com/digest</link>
+      <guid isPermaLink="false">491542</guid>
+      <description><![CDATA[国家能源局4月27日发布2026年3月全国电动汽车充电设施数据。根据国家充电设施监测服务平台数据，截至2026年3月底，我国电动汽车充电基础设施（枪）总数达到2148.1万个，同比增长46.9%。其中，公共充电设施（枪）486.3万个，同比增长28.1%，公共充电桩额定总功率达到2.34亿千瓦，平均功率约为48.06千瓦；私人充电设施（枪）1661.8万个，同比增长53.5%，私人充电设施报装用电容量达到1.47亿千伏安。]]></description>
+      <pubDate>Mon, 27 Apr 2026 11:08:29 +0800</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[进入2026年的财报披露季，A股汽车零部件企业陆续披露2025年年报。初步统计发现，“人形机器人”等相关表述密集出现，多]]></title>
+      <link>https://www.woshipm.com/digest</link>
+      <guid isPermaLink="false">491526</guid>
+      <description><![CDATA[进入2026年的财报披露季，A股汽车零部件企业陆续披露2025年年报。初步统计发现，“人形机器人”等相关表述密集出现，多数企业正积极布局这一赛道。业内人士表示，具身机器人与汽车产业技术同源、供应链互通、应用场景融合，具有极高的协同发展潜力。汽车零部件企业可依托车端客户优势快速切入其机器人供应链，人形机器人产业正从技术探索阶段迈向商业化应用阶段。（经济参考报）]]></description>
+      <pubDate>Mon, 27 Apr 2026 09:17:37 +0800</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[2026（第十九届）北京国际汽车展览会于4月24日至5月3日在北京举办。38万平方米的展厅内人潮涌动，除了各式新车型介绍]]></title>
+      <link>https://www.woshipm.com/digest</link>
+      <guid isPermaLink="false">491511</guid>
+      <description><![CDATA[2026（第十九届）北京国际汽车展览会于4月24日至5月3日在北京举办。38万平方米的展厅内人潮涌动，除了各式新车型介绍外，“海外销量”“产业链出海”“全球化布局”等词语也频繁被提及。出海成为驱动中国汽车产业增长的强劲引擎。多家主流车企的出海模式已从“产品出海”向“全产业链出海”深度转型，生态出海成为新的方式。（上证报）]]></description>
+      <pubDate>Mon, 27 Apr 2026 08:47:37 +0800</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[在收购推特（现在名为X）三年多后，埃隆·马斯克表示，他正朝着自己长期以来的目标迈进，那就是将这款应用打造成一款“万能应用]]></title>
+      <link>https://www.woshipm.com/digest</link>
+      <guid isPermaLink="false">491499</guid>
+      <description><![CDATA[在收购推特（现在名为X）三年多后，埃隆·马斯克表示，他正朝着自己长期以来的目标迈进，那就是将这款应用打造成一款“万能应用”，并包含一个新的金融服务工具，他此前承诺本月将向公众推出。基于马斯克上个月提供的时间框架，内置于社交网络X之内的银行和支付平台X Money，预计很快将首次面向公众开放。早期试用该服务的用户称赞其具有竞争力的优惠措施，包括符合条件的购物可获得3%的现金返还，以及现金储蓄可获得6%的利率 —— 后者约为全国平均水平的15倍。（新浪财经）]]></description>
+      <pubDate>Mon, 27 Apr 2026 08:38:57 +0800</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[沉寂多时的金刚石市场迎来价格破冰。从行业人士处了解到，近月来国内多家金刚石龙头企业密集上调产品价格，工业金刚石和培育钻石]]></title>
+      <link>https://www.woshipm.com/digest</link>
+      <guid isPermaLink="false">491496</guid>
+      <description><![CDATA[沉寂多时的金刚石市场迎来价格破冰。从行业人士处了解到，近月来国内多家金刚石龙头企业密集上调产品价格，工业金刚石和培育钻石毛坯涨幅10%至15%。此番涨价不仅是行业供需格局改善的反映，更折射出芯片集成化浪潮下，金刚石作为新材料的应用预期空间正被打开。随着龙头企业纷纷布局芯片散热等新应用场景，金刚石作为传统行业，正在撕掉周期品标签，向高成长新材料赛道跃迁。（证券时报）]]></description>
+      <pubDate>Mon, 27 Apr 2026 08:37:25 +0800</pubDate>
+    </item>
+<item>
         <title>安波福发布“中国定义”的核心战略，安波福中国及亚太区总裁杨晓明解读“中国定义”战略，是以中国创新能力...</title>
         <link>https://www.woshipm.com/digest</link>
         <guid isPermaLink="false">woshipm-20260426-6b60c5b0</guid>
         <pubDate>Sun, 26 Apr 2026 20:55:10 +0800</pubDate>
         <description>安波福发布“中国定义”的核心战略，安波福中国及亚太区总裁杨晓明解读“中国定义”战略，是以中国创新能力承接全球项目，服务非中国市场。针对智驾出海，安波福计划采用软硬件拆分方式，硬件通用、软件区域适配，同时提供中国芯片与国际芯片方案，满足全球合规。</description>
-    </item>     <item>
+    </item>
+<item>
         <title>4月26日，京东宣布启动“Aidol创造营”计划，面向全球征集AI智能硬件项目，希望联合产业伙伴在今...</title>
         <link>https://www.woshipm.com/digest</link>
         <guid isPermaLink="false">woshipm-20260426-c5f450e6</guid>
         <pubDate>Sun, 26 Apr 2026 17:14:58 +0800</pubDate>
         <description>4月26日，京东宣布启动“Aidol创造营”计划，面向全球征集AI智能硬件项目，希望联合产业伙伴在今年孵化101个AI硬件标杆。据京东介绍，报名截止到5月15日，首期“Aidol创造营”活动将于5月25日至6月18日落地。</description>
-    </item>     <item>
+    </item>
+<item>
         <title>据中国铁路上海局集团有限公司，截至4月25日，长三角铁路今年已完成海铁联运100.6万标箱，同比增长...</title>
         <link>https://www.woshipm.com/digest</link>
         <guid isPermaLink="false">woshipm-20260426-e8d5080a</guid>
         <pubDate>Sun, 26 Apr 2026 17:14:31 +0800</pubDate>
         <description>据中国铁路上海局集团有限公司，截至4月25日，长三角铁路今年已完成海铁联运100.6万标箱，同比增长11.3%，较去年提前14天突破百万标箱。今年以来，长三角持续增强沿海港口与内陆间的海铁联运通道能力。目前，上海港、宁波舟山港等主要港口海铁联运日均到发箱量已近8800标箱；固定班列开行数增至119条，重点服务光伏组件、白色家电、五金件等商品出口。（央视新闻）</description>
-    </item>     <item>
+    </item>
+<item>
         <title>2026年4月26日，上海国际旅游度假区迎来开放十周年。据上海国际旅游度假区管委会消息，十年间，这里...</title>
         <link>https://www.woshipm.com/digest</link>
         <guid isPermaLink="false">woshipm-20260426-256734ec</guid>
         <pubDate>Sun, 26 Apr 2026 17:13:19 +0800</pubDate>
         <description>2026年4月26日，上海国际旅游度假区迎来开放十周年。据上海国际旅游度假区管委会消息，十年间，这里累计接待游客逾1.8亿人次，实现旅游产业总收入1164亿元。（澎湃）</description>
-    </item>     <item>
+    </item>
+<item>
         <title>4月26日，国家超算互联网推出DeepSeek-V4限时免费对话服务。企业、科研机构及个人开发者只需...</title>
         <link>https://www.woshipm.com/digest</link>
         <guid isPermaLink="false">woshipm-20260426-5a3652e3</guid>
         <pubDate>Sun, 26 Apr 2026 17:11:39 +0800</pubDate>
         <description>4月26日，国家超算互联网推出DeepSeek-V4限时免费对话服务。企业、科研机构及个人开发者只需登录超算互联网进入Chat页面，即可免费体验DeepSeek-V4的百万Token超长上下文实时、流畅对话。此外，开发者还可在超算互联网AI社区下载DeepSeek-V4模型文件，并基于众智FlagOS统一软件栈和超算互联网核心节点部署的万卡超集群系统进行快速部署、推理和开发。</description>
-    </item>     <item>
+    </item>
+<item>
         <title>4月25日，主播中灿、林林先后发布告别内容，正式确认离开东方甄选，至此明明、天权、中灿、林林四位主播...</title>
         <link>https://www.woshipm.com/digest</link>
         <guid isPermaLink="false">woshipm-20260426-ac1f5617</guid>
         <pubDate>Sun, 26 Apr 2026 17:10:41 +0800</pubDate>
         <description>4月25日，主播中灿、林林先后发布告别内容，正式确认离开东方甄选，至此明明、天权、中灿、林林四位主播全部完成官宣离职。在4月25日的直播中，俞敏洪表示，已与四位主播进行深度、诚挚的沟通挽留，同时对接管理团队开展双向沟通，尽力留存核心人才。对于此次人事变动给用户、粉丝及团队带来的困扰，俞敏洪公开致歉，并表示四位主播均为陪伴平台成长的优秀员工，他们的离开是平台的损失。俞敏洪明确表示，本次核心主播离职不会影响东方甄选日常运营、产品供应链及用户服务体系，平台将持续正常开展直播业务。（界面）</description>
-    </item>     <item>
+    </item>
+<item>
         <title>报告显示，2025年，全国大型演唱会票房295.58亿元，观演人次近3800万，跨城观演比例超六成，...</title>
         <link>https://www.woshipm.com/digest</link>
         <guid isPermaLink="false">woshipm-20260426-24f21b44</guid>
         <pubDate>Sun, 26 Apr 2026 17:09:55 +0800</pubDate>
         <description>报告显示，2025年，全国大型演唱会票房295.58亿元，观演人次近3800万，跨城观演比例超六成，成为地方文旅消费的强力引擎。（新华社）</description>
-    </item>     <item>
+    </item>
+<item>
         <title>从民航局了解到，为持续提升国内通程航班和中转便利化服务向规范化、标准化、品质化方向发展，民航局日前印...</title>
         <link>https://www.woshipm.com/digest</link>
         <guid isPermaLink="false">woshipm-20260426-b9dfdf01</guid>
         <pubDate>Sun, 26 Apr 2026 17:09:45 +0800</pubDate>
         <description>从民航局了解到，为持续提升国内通程航班和中转便利化服务向规范化、标准化、品质化方向发展，民航局日前印发《民航旅客中转便利化实施指南（第三版）》。新修订的《指南》重点规范了旅客服务、行李服务、信息服务、保障措施等方面要求。（央视新闻）</description>
-    </item>     <item>
+    </item>
+<item>
         <title>4月24日，第十九届北京国际汽车展览会拉开帷幕。中国长安汽车集团发布“海纳百川”计划2.0暨长安蓝鲸...</title>
         <link>https://www.woshipm.com/digest</link>
         <guid isPermaLink="false">woshipm-20260426-ae00d2cc</guid>
         <pubDate>Sun, 26 Apr 2026 17:08:49 +0800</pubDate>
         <description>4月24日，第十九届北京国际汽车展览会拉开帷幕。中国长安汽车集团发布“海纳百川”计划2.0暨长安蓝鲸超擎双车价格权益，以全球技术、产品、布局为核心，明确2030年海外销量倍增至150万辆。</description>
-    </item>     <item>
+    </item>
+<item>
         <title>乘联分会秘书长崔东树发文表示，由于2025年1月基数低，虽然美国与伊朗战争导致运输受阻，3月进口车进...</title>
         <link>https://www.woshipm.com/digest</link>
         <guid isPermaLink="false">woshipm-20260426-92ff2b6c</guid>
         <pubDate>Sun, 26 Apr 2026 17:06:54 +0800</pubDate>
         <description>乘联分会秘书长崔东树发文表示，由于2025年1月基数低，虽然美国与伊朗战争导致运输受阻，3月进口车进口下滑较大，但2026年1-3月进口汽车10万辆，同比增3%，这仍是近期少见的1-3月增长，主要原因是因为25年末的低基数。随着国产车的崛起和国际品牌本土化加速，近几年汽车进口持续低迷，进口车持续3年负增长，如果熨平波动，则是连续8年的负增长。</description>
-    </item>     <item>
+    </item>
+<item>
         <title>在2026北京车展上，高性能车规和工业数字平台供应商芯擎科技发布全新AI座舱芯片“龍鹰二号”，在中央...</title>
         <link>https://www.woshipm.com/digest</link>
         <guid isPermaLink="false">woshipm-20260426-7792544a</guid>
         <pubDate>Sun, 26 Apr 2026 17:05:44 +0800</pubDate>
         <description>在2026北京车展上，高性能车规和工业数字平台供应商芯擎科技发布全新AI座舱芯片“龍鹰二号”，在中央计算平台领域实现了前瞻布局，将于2027年第一季度启动适配。该芯片覆盖AI座舱、舱驾融合全场景需求，采用柔性架构，灵活适配主机厂从入门级到旗舰级的中央计算平台演进。芯片AI算力高达200 TOPS，原生支持7B+多模态大模型，内置多核CPU 360KDMIPS，GPU 2800GFLOPS，支持LPDDR6/5x/5，带宽高达518GB/s。</description>
-    </item>     <item>
+    </item>
+<item>
         <title>4月26日，青岛港开通西非新集装箱航线，这是青岛港今年开通的第二条非洲航线。截至目前，青岛港已累计开...</title>
         <link>https://www.woshipm.com/digest</link>
         <guid isPermaLink="false">woshipm-20260426-2c340b1f</guid>
         <pubDate>Sun, 26 Apr 2026 17:04:51 +0800</pubDate>
         <description>4月26日，青岛港开通西非新集装箱航线，这是青岛港今年开通的第二条非洲航线。截至目前，青岛港已累计开通11条非洲集装箱航线，覆盖了东非、西非、北非等核心市场，同时与32条国际班列高效衔接，构建起贯通23个共建“一带一路”国家的海铁联运网络，对外贸易海上黄金通道愈发畅通。2026年一季度，青岛口岸对非出口总值突破435.6亿元，同比增长26.3%，其中机电产品、高新技术产品出口增速分别达到37.4%和25.7%。（央视新闻）</description>
-    </item>     <item>
+    </item>
+<item>
         <title>4月24日，在2026北京国际车展上，卡尔动力正式发布面向L4货运下一个十年的核心战略——Kargo...</title>
         <link>https://www.woshipm.com/digest</link>
         <guid isPermaLink="false">woshipm-20260426-d5a7a884</guid>
         <pubDate>Sun, 26 Apr 2026 10:57:49 +0800</pubDate>
         <description>4月24日，在2026北京国际车展上，卡尔动力正式发布面向L4货运下一个十年的核心战略——KargoBot Inside。据介绍，这是全球首个面向干线货运的“AI+Robot+Service”全栈赋能战略。</description>
-    </item>     <item>
+    </item>
+<item>
         <title>4月25日，DeepSeek官网更新的API文档显示，DeepSeek-V4-Pro模型API开启限...</title>
         <link>https://www.woshipm.com/digest</link>
         <guid isPermaLink="false">woshipm-20260426-040bd97c</guid>
         <pubDate>Sun, 26 Apr 2026 10:54:14 +0800</pubDate>
         <description>4月25日，DeepSeek官网更新的API文档显示，DeepSeek-V4-Pro模型API开启限时2.5折优惠活动，优惠期至2026年5月5日。优惠后，百万tokens输入价格（缓存命中）为0.25元，百万tokens输入价格（缓存未命中）为3元，百万tokens输出价格为6元。</description>
-    </item>     <item>
+    </item>
+<item>
         <title>利亚德在业绩说明会上表示，2025年公司境外显示业务实现营收32.67亿元，占显示业务营收的比重约5...</title>
         <link>https://www.woshipm.com/digest</link>
         <guid isPermaLink="false">woshipm-20260426-76e6ba55</guid>
         <pubDate>Sun, 26 Apr 2026 10:54:09 +0800</pubDate>
         <description>利亚德在业绩说明会上表示，2025年公司境外显示业务实现营收32.67亿元，占显示业务营收的比重约55%，规模首次超过了境内。境外市场的主要增长点在美国，公司在亚非拉市场相对友商来说布局比较晚，目前增长不及预期，尤其受个别大项目影响，导致整个区域增长不理想，基于现状，公司将进一步积极推进沙特工厂建设，预计7月投产后将覆盖亚非拉及中东地区，提升产品性价比和本地化服务能力；原有的斯洛伐克工厂主要服务欧美市场。（证券时报）</description>
     </item>
-    </channel>
+  </channel>
 </rss>
