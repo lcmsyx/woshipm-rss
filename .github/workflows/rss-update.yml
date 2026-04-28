@@ -20,7 +20,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install requests -q
+        run: pip install requests beautifulsoup4 -q
 
       - name: Run update script
         run: python scripts/fetch_and_update.py
