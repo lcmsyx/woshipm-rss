@@ -48,7 +48,7 @@ def get_file_content(path):
         import base64
         content = r.json()["content"]
         # 去除可能的换行符和末尾的=
-        content = content.replace("\n", "").rstrip("=")
+        content = content.replace("\n", "")
         return base64.b64decode(content).decode("utf-8"), r.json()["sha"]
     return None, None
 
