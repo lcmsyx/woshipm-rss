@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-增量更新RSS：每次运行抓取当天新增的快讯，追加到RSS中
-"""
 import os
 import re
 import json
@@ -123,18 +120,18 @@ def make_rss_item(item):
     guid = str(item.get("id", "") or hash(description) % 100000000)
     title = description[:60].replace("<", "&lt;").replace(">", "&gt;").replace("&", "&amp;") + ("..." if len(description) > 60 else "")
     
-    return f"""    <item>
+    return f'''    <item>
       <title><![CDATA[{title}]]></title>
       <link>https://www.woshipm.com/digest</link>
       <guid isPermaLink="false">{guid}</guid>
       <description><![CDATA[{description}]]></description>
       <pubDate>{format_pubdate(created)}</pubDate>
-    </item>"""
+    </item>'''
 
 
 def build_rss_header():
     now_str = datetime.now().strftime("%a, %d %b %Y %H:%M:%S +0800")
-    return f"""<?xml version="1.0" encoding="UTF-8"?>
+    return f'''<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>人人都是产品经理快讯</title>
@@ -143,14 +140,14 @@ def build_rss_header():
     <language>zh-cn</language>
     <lastBuildDate>{now_str}</lastBuildDate>
     <atom:link href="https://lcmsyx.github.io/woshipm-rss/rss.xml" rel="self" type="application/rss+xml"/>
-"""
+'''
 
 
 def build_rss_footer():
-    return """
+    return '''
   </channel>
 </rss>
-"""
+'''
 
 
 def main():
