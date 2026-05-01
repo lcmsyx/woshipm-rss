@@ -2,7 +2,7 @@ name: RSS Update Every 2 Hours
 
 on:
   schedule:
-    - cron: '0 */2 * * *'  # 每2小时整点运行一次
+    - cron: '0 */2 * * *'
   workflow_dispatch:
 
 jobs:
@@ -14,23 +14,7 @@ jobs:
           persist-credentials: true
           token: ${{ secrets.GH_TOKEN }}
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      - name: Install dependencies
-        run: pip install requests beautifulsoup4 -q
-
       - name: Run update script
-        run: python scripts/fetch_and_update.py
+        run: bash scripts/fetch_and_update.sh
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-
-      - name: Commit and push
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git diff --staged --quiet || git commit -m "Update RSS: $(date +'%Y-%m-%d %H:%M')"
-          git push
