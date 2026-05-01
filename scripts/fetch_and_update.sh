@@ -62,7 +62,7 @@ rss_result=$(get_file "$RSS_FILE")
 RSS_CONTENT=$(echo "$rss_result" | sed '/___SHA___:/d')
 RSS_SHA=$(echo "$rss_result" | grep "___SHA___:" | tail -1 | sed 's/___SHA___://')
 existing_guids=$(get_existing_guids "$RSS_CONTENT")
-existing_count=$(echo "$existing_guids" | grep -c . 2>/dev/null || echo 0)
+existing_count=$(echo "$existing_guids" | wc -l 2>/dev/null || echo 0)
 echo "当前RSS已有 ${existing_count} 条记录"
 
 echo "抓取最近2天数据..."
@@ -127,7 +127,7 @@ while IFS= read -r item; do
     fi
 done <<< "$all_news"
 
-truly_new_count=$(echo -e "$truly_new" | grep -c '{' 2>/dev/null || echo 0)
+truly_new_count=$(echo "$truly_new" | wc -l 2>/dev/null || echo 0)
 echo "去重后新增: ${truly_new_count} 条"
 
 if [ "$truly_new_count" == "0" ]; then
