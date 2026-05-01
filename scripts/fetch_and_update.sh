@@ -136,7 +136,8 @@ if [ "$truly_new_count" == "0" ]; then
     exit 0
 fi
 
-new_items_xml=""
+# 生成新items XML，存入临时文件避免sed转义问题
+new_items_xml_file=$(mktemp)
 while IFS= read -r item; do
     [ -z "$item" ] && continue
     guid=$(echo "$item" | jq -r '.id // empty' 2>/dev/null)
@@ -146,37 +147,37 @@ while IFS= read -r item; do
     [ ${#content} -gt 60 ] && title="${title}..."
     content_escaped=$(echo "$content" | sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g')
     pubdate=$(format_rss_date "$create_time")
-    new_items_xml="${new_items_xml}    <item>
-      <title><![CDATA[${title}]]></title>
-      <link>https://www.woshipm.com/digest</link>
-      <guid isPermaLink=\"false\">${guid}</guid>
-      <description><![CDATA[${content_escaped}]]></description>
-      <pubDate>${pubdate}</pubDate>
-    </item>
-"
+    echo "    <item>" >> "$new_items_xml_file"
+    echo "      <title><![CDATA[${title}]]></title>" >> "$new_items_xml_file"
+    echo "      <link>https://www.woshipm.com/digest</link>" >> "$new_items_xml_file"
+    echo "      <guid isPermaLink=\"false\">${guid}</guid>" >> "$new_items_xml_file"
+    echo "      <description><![CDATA[${content_escaped}]]></description>" >> "$new_items_xml_file"
+    echo "      <pubDate>${pubdate}</pubDate>" >> "$new_items_xml_file"
+    echo "    </item>" >> "$new_items_xml_file"
 done <<< "$truly_new"
 
-if [ -n "$RSS_CONTENT" ]; then
-    new_rss=$(echo "$RSS_CONTENT" | sed "s|<lastBuildDate>[^<]*</lastBuildDate>|<lastBuildDate>$(format_rss_date "$NOW")</lastBuildDate>|")
-    new_rss=$(echo "$new_rss" | sed "s|</channel>|${new_items_xml}  </channel>|")
-else
-    new_rss="<?xml version=\"1.0\" encoding=\"UTF-8\"?>
-<rss version=\"2.0\" xmlns:atom=\"http://www.w3.org/2005/Atom\">
-  <channel>
-    <title>人人都是产品经理快讯</title>
-    <link>https://www.woshipm.com/digest</link>
-    <description>人人都是产品经理每日快讯聚合，每2小时增量更新</description>
-    <language>zh-cn</language>
-    <lastBuildDate>$(format_rss_date "$NOW")</lastBuildDate>
-    <atom:link href=\"https://lcmsyx.github.io/woshipm-rss/rss.xml\" rel=\"self\" type=\"application/rss+xml\"/>
-${new_items_xml}  </channel>
-</rss>"
-fi
+# 更新lastBuildDate
+RSS_WITH_DATE=$(echo "$RSS_CONTENT" | sed "s|<lastBuildDate>[^<]*</lastBuildDate>|<lastBuildDate>$(format_rss_date "$NOW")</lastBuildDate>|")
 
-save_file "$RSS_FILE" "$new_rss" "增量更新RSS: +${truly_new_count}条" "$RSS_SHA"
+# 用Python拼接XML，避免sed转义问题
+python3 -c "
+import sys
+rss = sys.stdin.read()
+items = open('$new_items_xml_file').read()
+rss = rss.replace('</channel>', items + '  </channel>')
+print(rss, end='')
+" > /tmp/new_rss.xml
 
+rm -f "$new_items_xml_file"
+
+# 保存RSS
+save_file "$RSS_FILE" "$(cat /tmp/new_rss.xml)" "增量更新RSS: +${truly_new_count}条" "$RSS_SHA"
+
+# 保存存档
 data_result=$(get_file "${DATA_DIR}/woshipm_${TODAY_SHORT}.xml")
 data_sha=$(echo "$data_result" | grep "___SHA___:" | sed "s/___SHA___://")
-save_file "${DATA_DIR}/woshipm_${TODAY_SHORT}.xml" "$new_rss" "存档: ${TODAY_SHORT}" "$data_sha"
+save_file "${DATA_DIR}/woshipm_${TODAY_SHORT}.xml" "$(cat /tmp/new_rss.xml)" "存档: ${TODAY_SHORT}" "$data_sha"
+
+rm -f /tmp/new_rss.xml
 
 echo "完成！RSS现共有 $((existing_count + truly_new_count)) 条记录"
