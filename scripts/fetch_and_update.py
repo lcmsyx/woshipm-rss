@@ -5,7 +5,7 @@ import re
 import base64
 import requests
 import time
-from datetime import datetime
+from datetime import datetime, timedelta
 
 GH_TOKEN = os.environ.get("GH_TOKEN", "")
 REPO_OWNER = "lcmsyx"
@@ -53,8 +53,12 @@ def fetch_page(page):
     resp.raise_for_status()
     return resp.json()
 
-def fetch_today_news():
+def fetch_recent_news(days=2):
+    """获取最近N天的数据"""
     today = datetime.now().strftime("%Y-%m-%d")
+    yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
+    target_dates = {today, yesterday}
+    
     all_news = []
     page = 1
     while page <= 10:
@@ -62,24 +66,31 @@ def fetch_today_news():
         items = data.get("result", []) if isinstance(data, dict) else []
         if not items:
             break
-        page_has_today = False
+        
+        page_has_target = False
         page_has_old = False
+        
         for item in items:
             created = item.get("create_time", "")
             if not created:
                 continue
-            if created[:10] == today:
+            date_str = created[:10]
+            
+            if date_str in target_dates:
                 if not any(n.get("id") == item.get("id") for n in all_news):
                     all_news.append(item)
-                page_has_today = True
+                page_has_target = True
             else:
                 page_has_old = True
-        if page_has_today and page_has_old:
+        
+        if page_has_target and page_has_old:
             break
-        if not page_has_today and page_has_old:
+        if not page_has_target and page_has_old:
             break
+        
         page += 1
         time.sleep(0.5)
+    
     return all_news
 
 def get_existing_guids():
@@ -132,11 +143,12 @@ def main():
     print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] 开始增量更新...")
     existing_guids = get_existing_guids()
     print(f"当前RSS已有 {len(existing_guids)} 条记录")
-    new_items = fetch_today_news()
-    today = datetime.now().strftime("%Y-%m-%d")
-    print(f"当天({today})获取到: {len(new_items)} 条")
+    
+    new_items = fetch_recent_news(days=2)
+    print(f"最近2天获取到: {len(new_items)} 条")
+    
     if not new_items:
-        print("当天无新数据，更新lastBuildDate...")
+        print("最近2天无新数据，更新lastBuildDate...")
         current_content, sha = get_file_content(RSS_FILE)
         if current_content:
             now_str = datetime.now().strftime("%a, %d %b %Y %H:%M:%S +0800")
@@ -144,6 +156,7 @@ def main():
             save_file(RSS_FILE, new_rss, "更新时间戳: " + now_str)
             print("已更新时间戳")
         return
+    
     new_unique = [item for item in new_items if str(item.get("id", "")) not in existing_guids]
     seen_content = set()
     truly_new = []
@@ -153,7 +166,9 @@ def main():
         if h not in seen_content:
             seen_content.add(h)
             truly_new.append(item)
+    
     print(f"去重后新增: {len(truly_new)} 条")
+    
     if not truly_new:
         print("没有真正的新数据，更新lastBuildDate...")
         current_content, sha = get_file_content(RSS_FILE)
@@ -162,6 +177,7 @@ def main():
             new_rss = re.sub(r"<lastBuildDate>.*?</lastBuildDate>", "<lastBuildDate>" + now_str + "</lastBuildDate>", current_content)
             save_file(RSS_FILE, new_rss, "更新时间戳: " + now_str)
         return
+    
     current_content, sha = get_file_content(RSS_FILE)
     if current_content:
         channel_end = current_content.rfind("  </channel>")
@@ -169,13 +185,16 @@ def main():
             channel_end = current_content.rfind("</channel>")
     else:
         current_content = None
+    
     new_items_xml = "\n".join(make_rss_item(item) for item in truly_new)
+    
     if current_content and channel_end > 0:
         new_rss = current_content[:channel_end] + "\n" + new_items_xml + "\n" + current_content[channel_end:]
         now_str = datetime.now().strftime("%a, %d %b %Y %H:%M:%S +0800")
         new_rss = re.sub(r"<lastBuildDate>.*?</lastBuildDate>", "<lastBuildDate>" + now_str + "</lastBuildDate>", new_rss)
     else:
         new_rss = build_rss_header() + new_items_xml + build_rss_footer()
+    
     save_file(RSS_FILE, new_rss, f"增量更新RSS: +{len(truly_new)}条")
     today_str = datetime.now().strftime("%Y%m%d")
     data_file = f"{DATA_DIR}/woshipm_{today_str}.xml"
